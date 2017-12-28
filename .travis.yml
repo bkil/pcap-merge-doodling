@@ -1,0 +1,23 @@
+language: c
+
+sudo: false
+
+compiler: gcc
+
+addons:
+ apt:
+  packages:
+  - clang
+  - gdb
+  - indent
+  - valgrind
+
+script:
+- make
+- make check
+- make format
+- git diff --exit-code --unified
+
+branches:
+ only:
+ - master

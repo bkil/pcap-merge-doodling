@@ -1,6 +1,7 @@
 #ifndef TEST_TESTLIB_H_
 #define TEST_TESTLIB_H_
 
+#include "lib.h"
 #include <sys/types.h>
 
 off_t get_file_size (const char *filename);
